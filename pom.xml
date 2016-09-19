@@ -6,7 +6,7 @@
 
     <parent>
         <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starters</artifactId>
+        <artifactId>spring-boot-starter-parent</artifactId>
         <version>1.4.0.RELEASE</version>
     </parent>
 
@@ -65,15 +65,10 @@
             <artifactId>camel-stream</artifactId>
             <version>${camel.version}</version>
         </dependency>
-
-        <!--jms, activemq-->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-jms</artifactId>
-        </dependency>
+        <!--activemq-->
         <dependency>
             <groupId>org.apache.activemq</groupId>
-            <artifactId>activemq-broker</artifactId>
+            <artifactId>activemq-camel</artifactId>
         </dependency>
 
         <!-- operations -->
@@ -90,24 +85,6 @@
             <groupId>io.hawt</groupId>
             <artifactId>hawtio-springboot</artifactId>
             <version>${hawtio.version}</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>commons-logging</groupId>
-                    <artifactId>commons-logging</artifactId>
-                </exclusion>
-                <!--<exclusion>-->
-                    <!--<groupId>org.osgi</groupId>-->
-                    <!--<artifactId>org.osgi.enterprise</artifactId>-->
-                <!--</exclusion>-->
-                <!--<exclusion>-->
-                    <!--<groupId>org.osgi</groupId>-->
-                    <!--<artifactId>org.osgi.core</artifactId>-->
-                <!--</exclusion>-->
-                <!--<exclusion>-->
-                    <!--<groupId>io.hawt</groupId>-->
-                    <!--<artifactId>hawtio-git</artifactId>-->
-                <!--</exclusion>-->
-            </exclusions>
         </dependency>
         <dependency>
             <groupId>io.hawt</groupId>
