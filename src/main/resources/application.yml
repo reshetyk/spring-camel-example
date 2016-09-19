@@ -1,0 +1,6 @@
+spring.main.sources: example.MySpringBootRouter
+shell.auth.simple.user.password: password
+
+camel:
+  springboot:
+    allow-use-original-message: false
