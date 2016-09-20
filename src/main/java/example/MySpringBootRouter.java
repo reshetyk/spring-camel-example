@@ -7,8 +7,6 @@ import org.springframework.boot.actuate.endpoint.HealthEndpoint;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import static org.apache.activemq.camel.component.ActiveMQComponent.activeMQComponent;
-
 @SpringBootApplication
 public class MySpringBootRouter extends FatJarRouter {
 
@@ -20,7 +18,7 @@ public class MySpringBootRouter extends FatJarRouter {
 
     @Override
     public void configure() {
-        camelContext.addComponent("activemq", activeMQComponent("vm://localhost?broker.persistent=false"));
+//        camelContext.addComponent("activemqLoc", activeMQComponent("vm://localhost?broker.persistent=false"));
 
         from("activemq:queue:test_queue")
                 .transform().simple("ref:myBean")
